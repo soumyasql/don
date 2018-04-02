@@ -1,0 +1,35 @@
+1  ping 172.31.19.91  
+  2  ssh 172.31.19.91   
+ 3  ssh-keygen -t rsa   
+ 4  ssh-copy-id root@172.31.19.91    
+5  ssh 172.31.19.91    
+6  ssh-copy-id root@172.31.30.215   
+ 7  ssh 172.31.30.215    
+8  ssh-copy-id root@172.31.30.215   
+ 9  ansible  
+ 10  yum list | grep ansible 
+  11  yum install ansible  
+ 12  yum install ansible --enablerepo=epel  
+ 13  ansible  
+ 14  python   
+15  cd /etc/ansible/   
+16  ls   
+17  vim ansible.cfg   
+18  vi ansible.cfg   
+19  ls   
+20  vi hosts   
+21  ansible -m ping app   
+22  ansible  -m command  -a "ifconfig"  app   
+23  ansible  -m command  -a "hostname"  app   
+24  ansible  -m command  -a "service httpd status"  app   
+25  ansible  -m command  -a "yum install httpd -y"  app   
+26  ansible  -m command  -a "service httpd status"  app   
+27  ansible  -m command  -a "service httpd start"  app   
+28  ansible  -m command  -a "service httpd status"  app   
+29  ansible  -m command  -a "yum remove httpd -y && yum install nginx -y"  172.31.19.91   
+30  ansible  -m command  -a "yum remove httpd -y "  172.31.19.91   
+31  ansible  -m command  -a "yum install nginx -y "  172.31.19.91   
+32  cd   
+33  ls   
+34  vim myfirst.yml   
+35  ansible-playbook myfirst.yml
